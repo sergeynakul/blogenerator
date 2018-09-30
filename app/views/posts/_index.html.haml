@@ -1,0 +1,27 @@
+%h1 Listing posts
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th Published?
+      %th Views count
+      %th Published at
+      %th
+      %th
+      %th
+
+  %tbody
+    - @blog.posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.body
+        %td= post.status
+        %td= post.views_count
+        %td= post.published_at
+        %td= link_to 'Show', blog_post_path(blog_id: @blog.id, id: post.id)
+        %td= link_to 'Edit', edit_blog_post_path(blog_id: @blog.id, id: post.id)
+        %td= link_to 'Destroy', [post.blog, post], method: :delete, data: { confirm: 'Are you sure?' }
+
+%br

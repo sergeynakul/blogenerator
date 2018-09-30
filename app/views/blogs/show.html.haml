@@ -4,6 +4,8 @@
   - if @blog.picture.attached?
     = image_tag(@blog.thumbnail, :class => 'rounded float-left')
   %h1= @blog.title
-  = link_to 'Edit', edit_blog_path(@blog)
-  \|
-  = link_to 'Back', root_path
+  %p= link_to 'Edit', edit_blog_path(@blog)
+  %p= link_to 'New Post', new_blog_post_path(blog_id: @blog.id)
+  %p= link_to 'Back', root_path
+
+= render 'posts/index'

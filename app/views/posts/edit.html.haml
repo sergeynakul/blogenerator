@@ -1,0 +1,7 @@
+%h1 Editing post
+
+= render 'form'
+
+= link_to 'Show', blog_post_path(blog_id: @blog.id, id: @post.id)
+\|
+= link_to 'Back', blog_path(id: current_user.id, user_id: current_user.id)
