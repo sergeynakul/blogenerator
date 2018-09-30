@@ -1,0 +1,9 @@
+%h1 Editing user profile
+
+= render 'form'
+
+= link_to 'Change email/password', edit_user_registration_path, :class => 'navbar-link'
+|
+= link_to 'Show', @user_profile
+\|
+= link_to 'Back', root_path

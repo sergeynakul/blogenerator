@@ -26,7 +26,8 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     # @blog = Blog.new(blog_params)
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
+    @user = current_user
     @blog = @user.blogs.create(blog_params)
     
     respond_to do |format|
@@ -68,6 +69,7 @@ class BlogsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.find(params[:id])
+      # @blog = current_user.blog
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
