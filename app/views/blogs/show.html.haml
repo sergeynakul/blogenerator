@@ -1,8 +1,9 @@
 %p#notice= notice
 
 %header
-  = image_tag(@blog.thumbnail, :class => 'rounded float-left')
+  - if @blog.picture.attached?
+    = image_tag(@blog.thumbnail, :class => 'rounded float-left')
   %h1= @blog.title
-  = link_to 'Edit', edit_user_blog_path(@blog)
+  = link_to 'Edit', edit_blog_path(@blog)
   \|
-  = link_to 'Back', user_blogs_path
+  = link_to 'Back', root_path

@@ -5,11 +5,9 @@
       %strong= current_user.email
     = link_to 'Edit user profile', edit_user_profile_path(current_user)
     |
-    = link_to 'My blog', user_blog_path(id: current_user.id, user_id: current_user.id)
+    = link_to 'My blog', blog_path(id: current_user.id, user_id: current_user.id)
     |
     \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'}
-    %p
-    = link_to 'New Blog', new_user_blog_path(current_user)
   - else
     = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
     |
