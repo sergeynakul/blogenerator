@@ -1,7 +1,7 @@
 class Blog < ApplicationRecord
   has_one_attached :picture
   belongs_to :user
-  has_many :posts
+  has_many :posts, dependent: :destroy
   validates :title, presence: true
   validate :picture_attached
   

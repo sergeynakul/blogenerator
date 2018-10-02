@@ -22,7 +22,7 @@ require 'rails_helper'
 # expectations of assigns and templates rendered. These features have been
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
-
+=begin
 RSpec.describe UserProfilesController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
@@ -139,3 +139,4 @@ RSpec.describe UserProfilesController, type: :controller do
   end
 
 end
+=end

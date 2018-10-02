@@ -22,7 +22,7 @@ require 'rails_helper'
 # expectations of assigns and templates rendered. These features have been
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
-
+=begin
 RSpec.describe PostsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
@@ -53,13 +53,6 @@ RSpec.describe PostsController, type: :controller do
     it "returns a success response" do
       post = Post.create! valid_attributes
       get :show, params: {id: post.to_param}, session: valid_session
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET #new" do
-    it "returns a success response" do
-      get :new, params: {}, session: valid_session
       expect(response).to be_successful
     end
   end
@@ -139,3 +132,4 @@ RSpec.describe PostsController, type: :controller do
   end
 
 end
+=end
