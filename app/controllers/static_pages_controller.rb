@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @blog = Blog.new
-    @posts = Post.all.where(status: true).order('created_at DESC')
+    @blogs = Blog.all.order('updated_at DESC')
   end
 
   def about

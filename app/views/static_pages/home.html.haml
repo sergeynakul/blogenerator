@@ -17,6 +17,6 @@
 = link_to '3 best posts', bestofthebest_path
 %br
 %br
-%h2 All posts
-- @posts.each do |post|
-  %h5= post.title
+%h2 All blogs
+- @blogs.each do |blog|
+  %h5= link_to blog.title, blog_path(id: blog.id)
